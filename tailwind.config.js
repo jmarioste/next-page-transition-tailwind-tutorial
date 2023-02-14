@@ -25,7 +25,7 @@ module.exports = {
           },
           "100%": {
             opacity: 0,
-            transform: "translateY(-20px)",
+            transform: "translateY(20px)",
           },
         },
       },
