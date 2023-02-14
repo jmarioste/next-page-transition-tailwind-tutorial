@@ -1,9 +1,8 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Link from "next/link";
-import PageWithTransition from "../components/transitions/WithTransition";
-
-function MyApp({ Component, pageProps, router }: AppProps) {
+import PageWithTransition from "../components/PageWithTransition";
+function MyApp(props: AppProps) {
   return (
     <div>
       <div className="bg-slate-700 text-slate-50 py-4 ">
@@ -13,13 +12,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           <Link href="/contact">Contact</Link>
         </div>
       </div>
-      <PageWithTransition
-        Component={Component}
-        pageProps={pageProps}
-        router={router}
-      />
+      <PageWithTransition {...props} />
     </div>
   );
 }
-
 export default MyApp;
